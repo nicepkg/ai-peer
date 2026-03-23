@@ -132,15 +132,17 @@ You can also use ai-peer directly from the terminal as a human participant.
 
 ### Setup
 
-```bash
-# Option A: Shell alias (add to ~/.bashrc or ~/.zshrc)
-alias peer='PYTHONPATH=~/ai-peer/skills/ai-peer/scripts python3 -m ai_peer'
+After installing the skill (via `npx skills add` or manual copy), set up a shell alias pointing to where the skill was installed in your project:
 
-# Option B: Run inline each time (adjust path to your install)
-PYTHONPATH=/path/to/ai-peer/skills/ai-peer/scripts python3 -m ai_peer --help
+```bash
+# Add to ~/.bashrc or ~/.zshrc (adjust path to YOUR project)
+alias peer='PYTHONPATH=./your-project/.claude/skills/ai-peer/scripts python3 -m ai_peer'
+
+# Or use an absolute path for a global alias
+alias peer='PYTHONPATH=/absolute/path/to/.claude/skills/ai-peer/scripts python3 -m ai_peer'
 ```
 
-> All examples below use `peer` as the alias.
+> All examples below use `peer` as the alias. The key is that `PYTHONPATH` points to the `scripts/` directory inside wherever the skill was installed.
 
 ### Quick Start
 
